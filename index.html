@@ -1,7 +1,28 @@
 <!-- CHECKPOINT: versão estável registrada em 2025-11-11 (hotfix js-string) -->
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
+<style>
+/* 1) Sumir com o texto ao lado das logos */
+#fabricantes .vendor-body h3,
+#fabricantes .vendor-body p,
+#fabricantes .vendor-logo .no-logo { display:none !important; }
+
+/* 2) Tirar o retângulo ao redor das logos */
+#fabricantes .vendor-card, #fabricantes .vendor-logo {
+  background:transparent !important; border:none !important; box-shadow:none !important;
+}
+#fabricantes .vendor-logo img{
+  display:block; max-height:64px; max-width:100%; width:auto; object-fit:contain;
+  background:transparent; border:none; box-shadow:none;
+}
+
+/* 3) Menu sempre por cima; conteúdo não passa por cima do menu */
+header, .header, .catbar, .nav-sticky, .menu-sticky { position:sticky; top:0; z-index:1000 !important; }
+#mega-hero, .hero, .banner, .hero-media, #hero-media-box { z-index:1 !important; }
+main, #content, #content-panel, .page-wrap { padding-top:20px; }
+</style>
+
+  <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Dimitri Oliveira — Landing Page (PT/EN)</title>
